@@ -1,0 +1,631 @@
+/*================================================================
+  outerContainer
+  ================================================================*/
+/**
+ * outerContainer
+ *
+ * Grid Container that have 2 children in One Row and Two Column
+ * 
+ * Example HTML
+ *
+ * <div class="outerContainer">
+ *      <div class="cellOne">...</div>
+ *      <div class="cellTwo">...</div>
+ * </div>
+ *
+ */
+.outerContainer {
+    display: grid;
+    grid-template-columns: 40vw auto;
+    /* border:dotted */
+
+    margin: 0 5%;
+}
+
+/* Cell one
+  ================================================================*/
+.cellOne {
+    /* border:dotted */
+}
+
+/* Cell Two
+================================================================*/
+/**
+* cellContainer
+ *
+ * Grid Container that have 7 children in 3 Row and 3 Column
+ * 
+ * Example HTML
+ *
+ * <div class="cellTwo">
+ *      <div class="profil">...</div>
+ *      <div class="outerSkillContainer">...</div> 
+ * </div>
+ *
+ */
+.cellTwo {
+    margin-right: 0;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+
+    /* /* border:dotted */
+
+}
+
+
+/* profil
+  ================================================================*/
+/**
+* 
+* Example HTML
+*
+* <div class="profil">
+*      <h2 class="header">...</h2>
+*      <p class="bio">...</p>
+* </div>
+*/
+
+.profil {
+    padding: 0;
+    margin-top: 18%;
+    height: 65%;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    /* border:dotted */
+
+
+    grid-column: 1/4;
+}
+
+.header {
+    color: rgb(0, 72, 255);
+    font-size: 2.5rem;
+    /* /* border:dotted */
+    margin: 0;
+
+}
+
+.bio {
+    width: 90%;
+
+    word-spacing: 8px;
+    text-align: left;
+    font-size: 18px;
+    color: rgb(36, 36, 36);
+
+    /* border:dotted */
+}
+
+
+.container {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.336);
+    margin: .5rem;
+    padding: 0;
+
+
+    border-radius: 1rem;
+    /* /* border:dotted */
+
+}
+
+
+/* Section description */
+.sectionDes {
+    position: relative;
+    top: 3rem;
+}
+
+.project {
+    text-align: center;
+
+}
+
+.project {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.project::before {
+    width: 200px;
+    height: 3.5px;
+    border-radius: 3px;
+
+    content: '';
+    background-color: #000;
+
+    position: absolute;
+    top: 1rem;
+    right: 390px;
+}
+
+.project::after {
+    width: 200px;
+    height: 3.5px;
+    border-radius: 3px;
+
+    content: '';
+    background-color: #000;
+
+    position: absolute;
+    top: 1rem;
+    left: 390px;
+}
+
+/* outerSkillContainer
+  ================================================================*/
+.outerSkillContainer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+}
+
+/* skillContainer
+================================================================*/
+/**
+* 
+ * Example HTML
+ * <div class=skillContainer>
+ *       <div class=skillName>... </div>
+ *       <ProgressBar/>
+ *                                  
+ * </div>                          
+ * 
+ *
+ */
+.skillContainer {
+    /* border:dotted */
+    height: 7vw;
+    width: 15vw;
+    margin-right: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 3%;
+    background-image: linear-gradient(30deg, rgb(19, 10, 184), rgb(128, 3, 135));
+
+    border-radius: 10px;
+    transition: all .3s;
+
+}
+
+.progressContainer {
+    /* border:dotted */
+    width: 42%;
+}
+
+/* skillContainer state */
+.skillContainer:hover {
+    transform: scale(1.1);
+}
+
+.skillName {
+    font-size: 1.5rem;
+    /* /* border:dotted */
+    color: white;
+}
+
+/*================================================================
+cardContainer
+================================================================*/
+.cardContainer {
+    padding: 3rem 5rem 5rem 5rem;
+    background-image: linear-gradient(30deg, rgb(6, 0, 116), rgb(10, 7, 184));
+    /* /* border:dotted */
+
+}
+
+.cardContainer>h1 {
+    /* /* border:dotted */
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 2.7rem;
+}
+
+/* cardGrid
+  ================================================================*/
+/**
+ * cardGrid
+ *
+ * Contains 4 cell with same width
+ * 
+ * Example HTML
+ *
+ * <div class="cardGrid">
+ *      <div class="card">...</div>
+ *      <div class="card">...</div>
+ *      <div class="card">...</div>
+ *      <div class="card">...</div>
+ *  </div>
+ *
+ */
+.cardGrid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+/* card
+  ================================================================*/
+/**
+ * card
+ *
+ * Contains an icon, a title and a description
+ * 
+ * Example HTML
+ *
+* <div class="card">
+ *      <div class="cardIcon">...</div>
+ *      <div class="cardTitle">...</div>
+ *      <div class="cardDescription">...</div>
+ *  </div>
+ * 
+ *
+ */
+.card {
+    width: 95%;
+    height: 20rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.521);
+    background-color: #fff;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.animate__animated.animate__flip {
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+    -webkit-animation-name: flip;
+    animation-name: flip;
+}
+
+
+.cardTitle,
+.cardDescription {
+    text-align: center;
+
+}
+
+
+
+/*----------------------------  
+ * ---------------------------
+ * ----------------------------*/
+/*---- Mobile breakpoint -----*/
+@media screen and (max-width : 480px) {
+    .cellTwo {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+
+
+        padding-left: 0;
+        /* height: 30rem; */
+    }
+
+    .outerSkillContainer {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+
+        width: 90vw;
+        height: max-content;
+        margin-bottom: 1rem;
+    }
+
+    .outerContainer {
+        grid-template-columns: auto;
+        /* /* border:dotted */
+        margin: 0;
+        padding-left: 0;
+    }
+
+
+
+    .backgroundPic {
+        /* /* border:dotted */
+        width: 100vw;
+
+    }
+
+    .profil,
+    .cellTwo {
+        /* /* border:dotted */
+
+        /* width: 100%; */
+        padding: 0;
+        margin-right: 0;
+    }
+
+    .profil {
+        grid-column: 1/3;
+        position: relative;
+        /* bottom: 3.5rem; */
+    }
+
+    .cellTwo {
+        padding-left: 5%;
+
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+    }
+
+    .header {
+        font-size: 1.5rem;
+        width: 90vw;
+        text-align: center;
+    }
+
+    .bio {
+        width: 95%;
+        word-spacing: 3.5px;
+        text-align: center;
+        font-size: 16px;
+        /* /* border:dotted */
+
+    }
+
+    .skillContainer {
+        height: 95%;
+        width: 90%;
+    }
+
+    .progressContainer {
+        /* border:dotted */
+        width: 46%;
+    }
+
+    .skillName {
+        font-size: 1rem;
+    }
+
+    /*================================================================
+      cardContainer
+      ================================================================*/
+    .cardContainer {
+        padding: .5rem 0 .5rem 0;
+        /* /* border:dotted */
+        width: 100vw;
+
+    }
+
+    /* This container become one row and have a overflow-x*/
+    .cardGrid {
+
+        /* The width must be fixed to enable overflow */
+        width: 100vw;
+
+        /* Padding bottom must set to a better scroll */
+        padding-bottom: 1rem;
+
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto;
+
+        overflow-x: scroll;
+    }
+
+    .card {
+        height: 17rem;
+        width: 13rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    .cardContainer>h1 {
+        font-size: 1.5rem;
+
+    }
+
+    .cardTitle,
+    .cardDescription {
+        margin: 0 0 1rem 0;
+    }
+
+    .card:first-child {
+        margin-top: 1rem;
+        margin-left: 10%;
+    }
+
+
+
+    .card:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width : 480px) and (max-width:768px) {
+    .outerContainer {
+        margin: 0;
+    }
+
+    .cellTwo {
+        display: grid;
+        grid-template-columns: 40% auto;
+        /* border:dotted */
+
+        padding-left: 2rem;
+    }
+
+
+
+    .cellTwo {
+        margin-right: 0;
+        padding: 0;
+
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+
+        /* border:dotted */
+    }
+
+    .profil {
+        padding: 0;
+
+        display: inline-flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+
+        /* /* border:dotted */
+        grid-column: 1/4;
+    }
+
+    .header {
+        color: rgb(0, 72, 255);
+        font-size: 1.5rem;
+        /* /* border:dotted */
+        margin: 0;
+
+    }
+
+    .bio {
+        width: 100%;
+
+        text-align: left;
+        font-size: 16px;
+        color: rgb(36, 36, 36);
+    }
+
+    .container {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.336);
+        margin: .5rem;
+        padding: 0;
+
+
+        border-radius: 1rem;
+        /* /* border:dotted */
+
+    }
+
+    .outerSkillContainer {
+        width: 120%;
+        height: 120%;
+    }
+
+    .skillContainer {
+        display: flex;
+        justify-content: space-between;
+        height: 95%;
+        width: 90%;
+        /* padding: 10px 10px 10px 13.5px; */
+        background-image: linear-gradient(30deg, rgb(19, 10, 184), rgb(128, 3, 135));
+
+        border-radius: 10px;
+        transition: all .3s
+    }
+
+    .skillContainer:hover {
+        transform: scale(1.1);
+    }
+
+    .skillName {
+        font-size: 1.5rem;
+        /* /* border:dotted */
+        color: white;
+    }
+
+
+    .cardGrid {
+
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+
+        width: 97.5vw;
+        overflow-x: scroll;
+        padding: 1rem 0;
+        margin-left: 1rem;
+    }
+
+
+    .card {
+        width: 13rem;
+        height: 18rem;
+        padding: 1rem;
+        margin-right: 1rem;
+        border-radius: 10px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.521);
+        background-color: #fff;
+
+
+    }
+
+
+
+
+
+    .cardContainer {
+
+        padding: 0;
+        background-image: linear-gradient(30deg, rgb(6, 0, 116), rgb(10, 7, 184));
+        /* /* border:dotted */
+
+    }
+
+    .cardContainer>h1 {
+        /* /* border:dotted */
+        text-align: center;
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.7rem;
+        padding-top: 2rem;
+    }
+
+
+    .cardTitle,
+    .cardDescription {
+        text-align: center;
+
+    }
+
+
+}
+
+@media screen and (min-width : 768px) and (max-width:1100px) {
+    .cardGrid {
+        width: 91vw;
+        overflow-x: scroll;
+        padding: 1rem 0;
+    }
+
+    .card {
+        width: 13rem;
+        height: 18rem;
+        padding: 1rem;
+        margin-right: 1rem;
+        border-radius: 10px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.521);
+        background-color: #fff;
+    }
+
+    .cardContainer>h1 {
+        font-weight: 600;
+        font-size: 2.3rem;
+        padding-top: 1rem;
+    }
+}

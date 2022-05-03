@@ -1,0 +1,281 @@
+:root {
+    --primary: rgb(0, 72, 255);
+    --secodary: rgb(1, 17, 238);
+    --headerSize: 2.5rem;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+a {
+    color: #8e00f3;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul li {
+    list-style: none;
+    margin: 0.5rem 0;
+}
+
+
+
+.nav {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--secodary);
+    position: fixed;
+    top: 0.5rem;
+    right: 0.5rem;
+
+    transition: 0.3s all;
+    z-index: 5;
+}
+
+.menuIcon {
+    position: fixed;
+    top: 1.1rem;
+    right: 1.1rem;
+    color: white;
+
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    padding: 5px;
+    transition: 0.2s all;
+
+    z-index: 5;
+}
+
+.menuIcon:hover {
+    color: rgb(225, 216, 216);
+}
+
+.navExpand {
+    width: 80px;
+    height: 80px;
+    transform: scale(3.5);
+
+}
+
+.homeIcon,
+.contactIcon,
+.aboutIcon,
+.projectIcon {
+    color: white;
+    transition: 0.3s all;
+    z-index: 5;
+}
+
+.homeIcon:hover,
+.contactIcon:hover,
+.aboutIcon:hover,
+.projectIcon:hover {
+    color: rgb(255, 255, 255);
+}
+
+
+.homeIcon {
+    position: fixed;
+
+    animation: growthHome 0.4s normal forwards;
+}
+
+.projectIcon {
+    position: fixed;
+
+    animation: growthProject 0.4s normal forwards;
+}
+
+.aboutIcon {
+    position: fixed;
+
+    animation: growthAbout 0.4s normal forwards;
+
+}
+
+.contactIcon {
+    position: fixed;
+    animation: growthContact 0.4s normal forwards;
+
+}
+
+
+/*----------------------------
+ * ---------------------------
+ * ----------------------------*/
+/*---- Mobile breakpoint -----*/
+@media screen and (max-width: 600px) {
+    .menuIcon {
+        width: 28px;
+        height: 28px;
+
+    }
+
+    .navExpand {
+
+        transform: scale(2.5);
+
+    }
+
+    .homeIcon {
+        position: fixed;
+
+        animation: growthHomeMobile 0.4s normal forwards;
+    }
+
+    .projectIcon {
+        position: fixed;
+
+        animation: growthProjectMobile 0.4s normal forwards;
+    }
+
+    .aboutIcon {
+        position: fixed;
+
+        animation: growthAboutMobile 0.4s normal forwards;
+
+    }
+
+    .contactIcon {
+        position: fixed;
+        animation: growthContactMobile 0.4s normal forwards;
+
+    }
+
+    @keyframes growthHomeMobile {
+        0% {
+            top: 1.1rem;
+            right: 1.1rem;
+            font-size: 0px;
+        }
+
+        100% {
+            top: 1.1rem;
+            right: 7rem;
+            font-size: 20px;
+        }
+
+    }
+
+
+    @keyframes growthProjectMobile {
+        0% {
+            top: 1.1rem;
+            right: 1.1rem;
+            font-size: 0px;
+        }
+
+        100% {
+            top: 4.1rem;
+            right: 6.5rem;
+            font-size: 20px;
+        }
+    }
+
+
+    @keyframes growthAboutMobile {
+        0% {
+            top: 1.1rem;
+            right: 1.1rem;
+            font-size: 0px;
+        }
+
+        100% {
+            top: 6.2rem;
+            right: 4.3rem;
+            font-size: 20px;
+        }
+    }
+
+    @keyframes growthContactMobile {
+        0% {
+            top: 1.1rem;
+            right: 1.1rem;
+            font-size: 0px;
+        }
+
+        100% {
+            top: 7rem;
+            right: 1.5rem;
+            font-size: 20px;
+
+        }
+    }
+}
+
+
+@keyframes growthHome {
+    0% {
+        top: 1.1rem;
+        right: 1.1rem;
+        font-size: 0px;
+    }
+
+    100% {
+        top: 1.1rem;
+        right: 8rem;
+        font-size: 24px;
+    }
+
+}
+
+
+@keyframes growthProject {
+    0% {
+        top: 1.1rem;
+        right: 1.1rem;
+        font-size: 0px;
+    }
+
+    100% {
+        top: 4.5rem;
+        right: 7.5rem;
+        font-size: 20px;
+    }
+}
+
+
+@keyframes growthAbout {
+    0% {
+        top: 1.1rem;
+        right: 1.1rem;
+        font-size: 0px;
+    }
+
+    100% {
+        top: 7.5rem;
+        right: 5rem;
+        font-size: 24px;
+    }
+}
+
+@keyframes growthContact {
+    0% {
+        top: 1.1rem;
+        right: 1.1rem;
+        font-size: 0px;
+    }
+
+    100% {
+        top: 8.5rem;
+        right: 1.5rem;
+        font-size: 24px;
+
+    }
+}

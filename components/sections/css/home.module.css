@@ -1,0 +1,219 @@
+/*================================================================
+  Container
+  ================================================================*/
+
+/**
+ * Container with full width and height
+ *
+ * 
+ * 
+ * Example HTML
+ *
+ * <div class="container">
+ *      ...
+ * </div>
+ *
+ */
+
+
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    background: url("../../../public/bg1.svg") no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    color: white;
+
+}
+
+
+.text {
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.name {
+    color: tomato;
+}
+
+.button {
+    background: rgba(255, 99, 71, 0.029);
+
+    color: white;
+    border: 2px solid rgb(218, 0, 192);
+    box-shadow: 0 0 4px rgba(218, 0, 193, 0.85);
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    font-size: 1.6rem;
+    border-radius: 0.5rem;
+
+    transition: 0.3s all;
+}
+
+
+
+.button:hover {
+    background: rgb(233, 4, 206);
+    border: 2px solid rgb(216, 3, 191);
+}
+
+.button:active {
+    background: rgb(141, 2, 125);
+    animation: shakeX 0.8s;
+
+}
+
+@-webkit-keyframes shakeX {
+
+    from,
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+    }
+}
+
+@keyframes shakeX {
+
+    from,
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+    }
+}
+
+/* arrow down styles */
+.arrowDown {
+
+    margin-left: 1rem;
+    font-size: 18px;
+
+    animation: clickDown 2s infinite;
+}
+
+
+@-webkit-keyframes clickDown {
+
+    from,
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translate3d(0, -4px, 0);
+        transform: translate3d(0, -4px, 0);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translate3d(0, 4px, 0);
+        transform: translate3d(0, 4px, 0);
+    }
+}
+
+@keyframes clickDown {
+
+    from,
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translate3d(0, -4px, 0);
+        transform: translate3d(0, -4px, 0);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translate3d(0, 4px, 0);
+        transform: translate3d(0, 4px, 0);
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 480px) {
+    .text {
+        font-weight: 400;
+        font-size: 1.3rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .button {
+        font-size: 1rem;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        margin-top: 0.4rem;
+    }
+
+
+}
+
+
+
+@media screen and (min-width : 480px) and (max-width:768px) {
+    .text {
+        font-weight: 400;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .button {
+        font-size: 1.2rem;
+    }
+
+}

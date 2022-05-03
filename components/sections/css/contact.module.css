@@ -1,0 +1,429 @@
+/* --border: 1px solid red; */
+
+.h1 {
+    color: var(--primary);
+    font-size: var(--headerSize);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    height: 28rem;
+    /* border: dotted; */
+}
+
+.getInTouchContainer {
+    width: 50%;
+}
+
+.innerContainer1 {
+
+    color: black;
+
+    width: 80%;
+    height: 80vh;
+
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+
+}
+
+.gridItem1 {
+    grid-column: 2/2;
+
+    position: relative;
+    right: 70%;
+
+    display: block;
+
+}
+
+.gridItem1>h1 {
+    font-size: 2rem;
+    font-weight: 700;
+
+    text-align: center;
+
+}
+
+.gridItem1>h1::before {
+    width: 200px;
+    height: 3.5px;
+    border-radius: 3px;
+
+    content: '';
+    background-color: #000;
+
+    position: absolute;
+    top: 2.5rem;
+    right: 270px;
+}
+
+.gridItem1>h1::after {
+    width: 200px;
+    height: 3.5px;
+    border-radius: 3px;
+
+    content: '';
+    background-color: #000;
+
+    position: absolute;
+    top: 2.5rem;
+    left: 270px;
+}
+
+.innerContainer2 {
+    background-image: linear-gradient(30deg, rgb(6, 0, 116), rgb(10, 7, 184));
+    width: 100%;
+    height: 200px;
+    /* position: absolute;
+    top: 235vw; */
+
+    z-index: 20;
+}
+
+.formCard {
+
+
+    color: black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 25rem;
+
+    padding: 3rem;
+    margin-bottom: 3rem;
+
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(44, 39, 39, 0.629);
+    transition: 0.3s all;
+
+    z-index: 1;
+
+}
+
+
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    width: 100%;
+}
+
+.label {
+    text-align: start;
+    display: block;
+    width: 100%;
+}
+
+.input {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.button {
+    width: 100%;
+    height: 2rem;
+    padding: 6px;
+    border-radius: 3px;
+
+    border: none;
+
+    background-color: rgb(1, 13, 238);
+    color: white;
+
+    transition: 0.3s all;
+    margin-bottom: 2rem;
+}
+
+.button:hover {
+    background-color: rgb(1, 13, 101);
+}
+
+.button:active {
+    animation: shakeX 0.8s;
+}
+
+@-webkit-keyframes shakeX {
+
+    from,
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+    }
+}
+
+@keyframes shakeX {
+
+    from,
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+    }
+}
+
+.link {
+    display: flex;
+    justify-content: space-evenly;
+
+    width: 10rem;
+    margin-bottom: 1rem;
+}
+
+.iconLink {
+    color: white;
+}
+
+.iconLink:hover {
+    color: tomato;
+}
+
+.copyRigth {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: #fff;
+
+    height: 100%;
+    z-index: 0;
+}
+
+@media screen and (max-width:480px) {
+    .container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        height: 140vh;
+        width: 100%;
+        /* border: dotted; */
+    }
+
+    .gridItem1 {
+        right: 0;
+    }
+
+    .innerContainer1 {
+        position: relative;
+        top: 19%;
+
+
+        color: black;
+
+        width: 100%;
+        height: 80vh;
+
+        padding: 0rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    .getInTouchContainer {
+        width: 100%;
+    }
+
+    .getInTouchContainer>p,
+    .getInTouchContainer>h1 {
+        text-align: center;
+    }
+
+    .innerContainer2 {
+        background-color: rgb(13, 0, 161);
+        width: 100%;
+        height: 10rem;
+
+        border: dotted;
+
+        display: none;
+    }
+
+    .formCard {
+
+
+        color: black;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 95%;
+
+        padding: 0.8rem;
+        margin-bottom: 3rem;
+
+        background-color: #fff;
+        box-shadow: 0 0 5px rgba(44, 39, 39, 0.629);
+        transition: 0.3s all;
+
+        z-index: 1;
+
+    }
+}
+
+
+@media screen and (min-width : 480px) and (max-width:768px) {
+    .container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        height: 28rem;
+        /* border: dotted; */
+
+    }
+
+
+
+    .innerContainer1 {
+
+        /* border: 1px solid red; */
+
+        color: black;
+
+        width: 90%;
+        height: 80vh;
+
+        padding: 0.5rem;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+
+        position: relative;
+        right: 5%;
+
+    }
+
+    .getInTouchContainer {
+        width: 100%;
+        /* border: dotted; */
+    }
+
+    .gridItem1 {
+        grid-column: 2/2;
+
+        position: relative;
+        right: 70%;
+        text-align: center;
+        /* border: dotted; */
+    }
+
+    .innerContainer2 {
+        background-image: linear-gradient(30deg, rgb(6, 0, 116), rgb(10, 7, 184));
+        width: 100%;
+        height: 200px;
+        /* position: absolute;
+        top: 235vw; */
+        z-index: 20;
+    }
+
+    .formCard {
+
+
+        color: black;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 120%;
+
+        padding: 2rem;
+        margin-bottom: 3rem;
+
+        background-color: #fff;
+        box-shadow: 0 0 5px rgba(44, 39, 39, 0.629);
+        transition: 0.3s all;
+
+        z-index: 1;
+
+    }
+
+
+
+    .inputContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+        width: 100%;
+    }
+
+    .label {
+        text-align: start;
+        display: block;
+        width: 100%;
+    }
+
+    .input {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .button {
+        width: 100%;
+        height: 2rem;
+        padding: 6px;
+        border-radius: 3px;
+
+        border: none;
+
+        background-color: rgb(1, 13, 238);
+        color: white;
+
+        transition: 0.3s all;
+        margin-bottom: 2rem;
+    }
+}

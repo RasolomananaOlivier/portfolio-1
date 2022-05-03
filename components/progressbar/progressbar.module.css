@@ -1,0 +1,32 @@
+.svg {
+    border: dotted;
+
+
+}
+
+.svgCircleBg {
+    fill: none;
+
+}
+
+.svgCircle {
+    fill: none;
+}
+
+.svgText {
+    font-size: 1.1rem;
+    text-anchor: middle;
+    fill: rgb(255, 255, 255);
+    font-weight: bold;
+
+}
+
+@media screen and (max-width:400px) {
+    .svg {
+        margin-bottom: 1rem;
+        height: 4rem;
+        width: 4rem;
+        left: .5rem;
+    }
+
+}
